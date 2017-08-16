@@ -4,9 +4,11 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/SphereSoftware/go4rails/data"
 )
 
 func main() {
-
-	fmt.Println("test")
+	project := data.New()
+	fmt.Println(project)
 }

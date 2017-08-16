@@ -6,12 +6,17 @@ type ProjectData struct {
 	Name string
 }
 
-// Preload walk through data dir and load all examples, parse Ruby & Go files
-// Add Sections and Articles into ProjectData object for future use.
-func Preload() ProjectData {
+// New is basic factory that build ProjectData object
+func New() ProjectData {
 	project := ProjectData{
 		Name: "Go4Rails",
 	}
 
 	return project
+}
+
+// New Parse through data dir and load all examples, parse Ruby & Go files
+// Add Sections and Articles into ProjectData object for future use.
+func (*ProjectData) Parse() {
+
 }
