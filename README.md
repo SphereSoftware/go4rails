@@ -52,6 +52,7 @@ wall and try to replace some parts of the monolithic app with `golang` based sol
 		- [dependency management](#dependency-management)
 		- [code generators](#code-generators)
 		- [http servers](#http-servers)
+		- [migrations](#migrations)
 		- [routing](#routing)
 			- [Models](#models)
 				- [CRUD](#crud)
@@ -99,6 +100,7 @@ wall and try to replace some parts of the monolithic app with `golang` based sol
 ### dependency management
 ### code generators
 ### http servers
+### migrations
 ### routing
 #### Models
 ##### CRUD

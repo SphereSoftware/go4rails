@@ -2,8 +2,11 @@
 // how to solve day to day problems using `Go`
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
+
 	fmt.Println("test")
 }
