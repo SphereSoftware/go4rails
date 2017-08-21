@@ -3,12 +3,10 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/SphereSoftware/go4rails/data"
 )
 
 func main() {
 	project := data.New()
-	fmt.Println(project)
+	project.Parse()
 }
