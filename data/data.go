@@ -4,15 +4,16 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
 )
 
 // ProjectData is root object collects whole information about this project and
 // used for TOC generation as well as HTML version build.
 type ProjectData struct {
-	Name string // Project title
-	Root *Node  // Root fot parsed data
-	root string // path to data folder
+	Name              string // Project title
+	Root              *Node  // Root fot parsed data
+	ProjectRootFolder string // path to data folder
 }
 
 // FileInfo is a struct created from os.FileInfo interface for serialization.
@@ -26,18 +27,19 @@ type FileInfo struct {
 
 // Node represents a node in a directory tree.
 type Node struct {
-	FullPath string    `json:"path"`
-	Info     *FileInfo `json:"info"`
-	Children []*Node   `json:"children"`
-	IsDir    bool      `json:"is_dir"`
-	Parent   *Node     `json:"-"`
+	FullPath  string    `json:"path"`
+	LocalPath string    `json:"local_path"`
+	Info      *FileInfo `json:"info"`
+	Children  []*Node   `json:"children"`
+	IsDir     bool      `json:"is_dir"`
+	Parent    *Node     `json:"-"`
 }
 
 // New is basic factory that build ProjectData object
 func New() ProjectData {
 	project := ProjectData{
-		Name: "Go4Rails",
-		root: projectRrootDir(),
+		Name:              "Go4Rails",
+		ProjectRootFolder: projectRrootDir(),
 	}
 
 	return project
@@ -68,16 +70,17 @@ func newTree(root string) *Node {
 		}
 
 		parents[path] = &Node{
-			FullPath: path,
-			Info:     fileInfoFromInterface(info),
-			Children: make([]*Node, 0),
-			IsDir:    info.IsDir(),
+			FullPath:  path,
+			LocalPath: strings.TrimLeft(path, root),
+			Info:      fileInfoFromInterface(info),
+			Children:  make([]*Node, 0),
+			IsDir:     info.IsDir(),
 		}
 
 		return nil
 	}
 
-	filepath.Walk(root, walkFunc)
+	filepath.Walk(root+"/data", walkFunc)
 
 	var result *Node
 	for path, node := range parents {
@@ -98,8 +101,8 @@ func newTree(root string) *Node {
 	return result
 }
 
-// Parse will go through data dir and load all examples, parse Ruby & Go files
+// LoadData will go through data dir and load all examples, parse Ruby & Go files
 // Add Sections and Articles into ProjectData object for future use.
-func (p *ProjectData) Parse() {
-	p.Root = newTree(p.root + "/data")
+func (p *ProjectData) LoadData() {
+	p.Root = newTree(p.ProjectRootFolder)
 }

@@ -14,10 +14,4 @@ wall and try to replace some parts of the monolithic app with `golang` based sol
 
 ## Table of content
 
-- [data](data)
-  - [basics](data/basics)
-    - [controll_flow](data/basics/controll_flow)
-  - [cases](data/cases)
-    - [dependency_managment](data/cases/dependency_managment)
-    - [markdown](data/cases/markdown)
-    - [templating](data/cases/templating)
+{{.Toc}}

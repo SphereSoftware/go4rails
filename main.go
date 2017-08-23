@@ -4,9 +4,12 @@ package main
 
 import (
 	"github.com/SphereSoftware/go4rails/data"
+	"github.com/SphereSoftware/go4rails/views"
 )
 
 func main() {
 	project := data.New()
-	project.Parse()
+	project.LoadData()
+	readme := views.New(&project)
+	readme.Build()
 }
