@@ -1,6 +1,8 @@
-# go4rails
+# #go4rails
 
 Golang for Ruby on Rails developer, tools tips &amp; tricks
+
+![#go4rails](https://user-images.githubusercontent.com/31591/29714083-1e6248f6-89aa-11e7-8a82-b52abc9b35d5.jpg)
 
 ## Intro
 
