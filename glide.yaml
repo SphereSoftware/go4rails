@@ -1,0 +1,4 @@
+package: github.com/SphereSoftware/go4rails
+import:
+- package: github.com/russross/blackfriday
+  version: ~2.0.0

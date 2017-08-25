@@ -1,6 +1,8 @@
-# go4rails
+# #go4rails
 
 Golang for Ruby on Rails developer, tools tips &amp; tricks
+
+![#go4rails](https://user-images.githubusercontent.com/31591/29714083-1e6248f6-89aa-11e7-8a82-b52abc9b35d5.jpg)
 
 ## Intro
 
@@ -14,96 +16,43 @@ wall and try to replace some parts of the monolithic app with `golang` based sol
 
 ## Table of content
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+- [data](data)
+  - [cases](data/cases)
+    - [dependency_managment](data/cases/dependency_managment)
+    - [markdown](data/cases/markdown)
+    - [templating](data/cases/templating)
+  - [rails_specific_cases](data/rails_specific_cases)
+    - [view](data/rails_specific_cases/view)
+    - [mvc_frameworks](data/rails_specific_cases/mvc_frameworks)
+    - [http_server](data/rails_specific_cases/http_server)
+    - [generators](data/rails_specific_cases/generators)
+    - [controller](data/rails_specific_cases/controller)
+    - [routing](data/rails_specific_cases/routing)
+    - [model](data/rails_specific_cases/model)
+    - [migrations](data/rails_specific_cases/migrations)
+  - [standard_types](data/standard_types)
+    - [regular_expressions](data/standard_types/regular_expressions)
+    - [hashes](data/standard_types/hashes)
+    - [strings](data/standard_types/strings)
+    - [arrays](data/standard_types/arrays)
+    - [numbers](data/standard_types/numbers)
+  - [common_cases](data/common_cases)
+    - [cli_tools](data/common_cases/cli_tools)
+    - [date_and_time](data/common_cases/date_and_time)
+    - [working_with_file](data/common_cases/working_with_file)
+    - [json](data/common_cases/json)
+    - [environment_variables](data/common_cases/environment_variables)
+    - [networking](data/common_cases/networking)
+  - [concurrency_and_parallelism](data/concurrency_and_parallelism)
+    - [threads](data/concurrency_and_parallelism/threads)
+    - [mutexes](data/concurrency_and_parallelism/mutexes)
+  - [basics](data/basics)
+    - [controll_flow](data/basics/controll_flow)
+    - [classes_objects_and_variables](data/basics/classes_objects_and_variables)
+    - [inheritance](data/basics/inheritance)
+    - [switch_case](data/basics/switch_case)
+    - [blocks_and_iterators](data/basics/blocks_and_iterators)
+    - [for_while_each](data/basics/for_while_each)
+    - [functions_and_closures](data/basics/functions_and_closures)
+    - [access_control](data/basics/access_control)
 
-- [go4rails](#go4rails)
-	- [Intro](#intro)
-	- [Table of content](#table-of-content)
-	- [Basics](#basics)
-		- [Control Structures](#control-structures)
-			- [For/While/Each](#forwhileeach)
-			- [If/Else](#ifelse)
-			- [Switch/Case](#switchcase)
-			- [Blocks and Iterators](#blocks-and-iterators)
-		- [Classes, Objects, and Variables](#classes-objects-and-variables)
-		- [Inheritance](#inheritance)
-		- [Access Control](#access-control)
-		- [Functions and Closures](#functions-and-closures)
-	- [Standard Types](#standard-types)
-		- [Numbers](#numbers)
-		- [Strings](#strings)
-		- [Arrays](#arrays)
-		- [Hashes](#hashes)
-		- [Regular Expressions](#regular-expressions)
-		- [Time](#time)
-	- [Common cases](#common-cases)
-		- [Working With File](#working-with-file)
-		- [Parsing JSON](#parsing-json)
-		- [Date & Time](#date-time)
-		- [Regular Expressions](#regular-expressions)
-		- [Networking](#networking)
-		- [Concurrency and Parallelism](#concurrency-and-parallelism)
-			- [Mutexes](#mutexes)
-			- [Threads](#threads)
-		- [Build CLI tools](#build-cli-tools)
-		- [Environment Variables](#environment-variables)
-	- [Rails specific cases](#rails-specific-cases)
-		- [MVC frameworks](#mvc-frameworks)
-		- [dependency management](#dependency-management)
-		- [code generators](#code-generators)
-		- [http servers](#http-servers)
-		- [routing](#routing)
-			- [Models](#models)
-				- [CRUD](#crud)
-			- [Controllers](#controllers)
-			- [View layer](#view-layer)
-			- [Testing](#testing)
-				- [Unit testing](#unit-testing)
-				- [Integrational testing](#integrational-testing)
-
-<!-- /TOC -->
-
-## Basics
-### Control Structures
-#### For/While/Each
-#### If/Else
-#### Switch/Case
-#### Blocks and Iterators
-### Classes, Objects, and Variables
-### Inheritance
-### Access Control
-### Functions and Closures
-
-## Standard Types
-### Numbers
-### Strings
-### Arrays
-### Hashes
-### Regular Expressions
-### Time
-
-## Common cases
-### Working With File
-### Parsing JSON
-### Date & Time
-### Regular Expressions
-### Networking
-### Concurrency and Parallelism
-#### Mutexes
-#### Threads
-### Build CLI tools
-### Environment Variables
-
-## Rails specific cases
-### MVC frameworks
-### dependency management
-### code generators
-### http servers
-### routing
-#### Models
-##### CRUD
-#### Controllers
-#### View layer
-#### Testing
-##### Unit testing
-##### Integrational testing

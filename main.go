@@ -2,8 +2,14 @@
 // how to solve day to day problems using `Go`
 package main
 
-import "fmt"
+import (
+	"github.com/SphereSoftware/go4rails/data"
+	"github.com/SphereSoftware/go4rails/views"
+)
 
 func main() {
-	fmt.Println("test")
+	project := data.New()
+	project.LoadData()
+	readme := views.New(&project)
+	readme.Build()
 }
