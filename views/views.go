@@ -20,7 +20,7 @@ type View struct {
 func New(project *data.ProjectData) *View {
 	return &View{
 		project:      project,
-		viewFilePath: project.ProjectRootFolder + "/views/README.go.md",
+		viewFilePath: project.ProjectRootFolder + "/views/README.md",
 	}
 }
 
